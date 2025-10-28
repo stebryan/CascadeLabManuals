@@ -6,12 +6,10 @@
   <introduction>
     <p> In our first module, we will begin to develop our understanding of chemistry and take a closer look at how scientists approach understanding the world around us. Specifically, our goals are to: Develop an understanding of chemistry.Define the steps of the scientific method. Recognize the difference between a scientific theory and scientific law. Distinguish between qualitative and quantitative observations. Classify independent, dependent, and controlled variables.
  </p>
- <sidebyside>
     <!-- Left: Image -->
     <figure xml:id="intro-chemistry">
-        <caption>Intro to Chemistry &amp; the Scientific Method</caption>
-        <image source="images/yellowBeaker.jpg" width="60%" />
-        <description>An assortment of colorful beakers illustrating chemistry concepts.</description>
+        <image source="images/beaker.jpg" width="60%" />
+        <description>An assortment of colorful liquid filled test tubes in a beaker.</description>
     </figure>
 
     <!-- Right: Text Content -->
@@ -26,7 +24,6 @@
             <item>Classify independent, dependent, and controlled variables.</item>
         </list>
     </paragraph>
-</sidebyside>
   </introduction>
 
   <!-- include sections -->
