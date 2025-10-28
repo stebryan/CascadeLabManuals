@@ -4,8 +4,19 @@
   <title>What is Chemistry?</title>
 
   <p> So, what exactly is chemistry? Chemistry is one branch of the physical sciences. Let's take a step back for a second to think about what science is. Science is an orderly way of thinking about and understanding the world around us. In science, we observe what happens and try to understand why it happens.
-</p>
-<p> As we said earlier, chemistry is just one branch of the physical sciences, but it is central to our understanding of biology, geology, materials science, medicine, and branches of engineering, among other areas of science. Specifically, chemistry attempts to understand the world based on the behavior of the particles that make up matter: atoms, molecules, and ions. Chemists study the composition, structure, and properties of matter, as well as changes that occur in matter. Chemists make observations about the world around us and pose questions to learn more about those observations.
-</p>
+  </p>
+
+  <p> As we said earlier, chemistry is just one branch of the physical sciences, but it is central to our understanding of biology, geology, materials science, medicine, and branches of engineering, among other areas of science. Specifically, chemistry attempts to understand the world based on the behavior of the particles that make up matter: atoms, molecules, and ions. Chemists study the composition, structure, and properties of matter, as well as changes that occur in matter. Chemists make observations about the world around us and pose questions to learn more about those observations.
+  </p>
+
+
+
+<interactive xml:id="interactive-chemistry-map"
+             iframe="interactives/chemistry-connections.html"
+             width="100%"
+             height="640">
+  <title>Explore Chemistry Connections</title>
+ 
+</interactive>
 
 </section>

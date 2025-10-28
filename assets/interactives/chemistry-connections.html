@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Explore Chemistry Connections</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .interactive-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .figure-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .figure-header h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+
+    .figure-header p {
+      margin: 0;
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    object#chemistry-map {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 0.75rem;
+      background: #ffffff;
+      box-shadow: 0 15px 30px rgb(15 23 42 / 12%);
+    }
+
+    .info-panel {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 20px 35px rgb(15 23 42 / 10%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .info-panel h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #1f2937;
+    }
+
+    .info-panel p {
+      margin: 0;
+      line-height: 1.6;
+      color: #374151;
+      font-size: 1.05rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 960px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .info-panel {
+        order: -1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="interactive-wrapper">
+    <header class="figure-header">
+      <h1 id="interactive-heading">Explore Chemistry Connections</h1>
+      <p id="interactive-summary">Select a discipline to learn how chemistry connects to it.</p>
+    </header>
+    <div class="content">
+      <object
+        id="chemistry-map"
+        type="image/svg+xml"
+        data="../images/what-is-chemistry-clean.svg"
+        role="img"
+        aria-labelledby="interactive-heading info-title info-description">
+        <p>This interactive requires inline SVG support.</p>
+      </object>
+      <section class="info-panel" aria-live="polite" aria-atomic="true">
+        <h2 id="info-title">Chemistry</h2>
+        <p id="info-description">Chemistry is the central science, linking all other fields.</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const TOPIC_DATA = {
+      "vectA-Chemistry": {
+        title: "Chemistry",
+        description: "Chemistry is the central science, linking all other fields."
+      },
+      "vectA-Medicine": {
+        title: "Medicine",
+        description: "Chemistry is essential in drug design and pharmacology."
+      },
+      "vectA-Biology": {
+        title: "Biology",
+        description: "Chemistry explains biochemical processes in living organisms."
+      },
+      "vectA-Food": {
+        title: "Food Science",
+        description: "Chemistry helps understand food composition and reactions."
+      },
+      "vectA-Agriculture": {
+        title: "Agriculture",
+        description: "Chemistry is used in fertilizers, pesticides, and soil analysis."
+      },
+      "vectA-Geology": {
+        title: "Geology & Earth Sciences",
+        description: "Chemistry explains mineral composition and geochemical cycles."
+      },
+      "vectA-Toxicology": {
+        title: "Toxicology",
+        description: "Chemistry studies harmful substances and their effects."
+      },
+      "vectA-Biochemistry": {
+        title: "Biochemistry & Molecular Biology",
+        description: "Chemistry underpins molecular interactions and enzyme activity."
+      },
+      "vectA-Environmental": {
+        title: "Environmental Science",
+        description: "Chemistry helps monitor pollution and develop green technologies."
+      },
+      "vectA-Geochemistry": {
+        title: "Geochemistry",
+        description: "Chemistry explains chemical composition of rocks and soils."
+      },
+      "vectA-ChemicalEngineering": {
+        title: "Chemical Engineering",
+        description: "Chemistry drives industrial processes and material design."
+      },
+      "vectA-Nuclear": {
+        title: "Nuclear Chemistry",
+        description: "Chemistry studies radioactive elements and nuclear reactions."
+      },
+      "vectA-Physics": {
+        title: "Physics",
+        description: "Chemistry overlaps with physics in quantum mechanics and thermodynamics."
+      },
+      "vectA-Materials": {
+        title: "Materials Science",
+        description: "Chemistry is key to developing new materials and composites."
+      },
+      "vectA-Nanoscience": {
+        title: "Nanoscience & Nanotechnology",
+        description: "Chemistry enables manipulation of matter at the nanoscale."
+      },
+      "vectA-ChemicalPhysics": {
+        title: "Chemical Physics",
+        description: "Chemistry and physics combine to study molecular dynamics."
+      },
+      "vectA-Mathematics": {
+        title: "Mathematics",
+        description: "Chemistry uses math for modeling reactions and kinetics."
+      },
+      "vectA-ComputerScience": {
+        title: "Computer Science",
+        description: "Chemistry uses computational models and simulations."
+      }
+    };
+
+    const infoTitle = document.getElementById("info-title");
+    const infoDescription = document.getElementById("info-description");
+    const chemistryMap = document.getElementById("chemistry-map");
+
+    const fitParentFrame = () => {
+      const frame = window.frameElement;
+      if (!frame) {
+        return;
+      }
+      frame.style.width = "100%";
+      frame.style.maxWidth = "100%";
+
+      const doc = document.documentElement;
+      const body = document.body;
+      const height = Math.max(
+        body.scrollHeight,
+        doc.scrollHeight,
+        body.offsetHeight,
+        doc.offsetHeight
+      );
+      frame.style.height = `${height}px`;
+    };
+
+    const setPanelContent = (topicId) => {
+      const topic = TOPIC_DATA[topicId];
+      if (!topic) {
+        return;
+      }
+      infoTitle.textContent = topic.title;
+      infoDescription.textContent = topic.description;
+    };
+
+    const activateTopic = (topicId, nodes) => {
+      nodes.forEach((node) => {
+        if (!node) {
+          return;
+        }
+        node.classList.toggle("active", node.id === topicId);
+      });
+      setPanelContent(topicId);
+    };
+
+    const injectInteractionStyles = (svgDoc) => {
+      const svgRoot = svgDoc.querySelector("svg");
+      if (!svgRoot) {
+        return;
+      }
+      const style = svgDoc.createElementNS("http://www.w3.org/2000/svg", "style");
+      style.textContent = `
+        .interactive-node {
+          cursor: pointer;
+          outline: none;
+        }
+        .interactive-node rect {
+          transition: fill 180ms ease, stroke 180ms ease;
+        }
+        .interactive-node:focus rect,
+        .interactive-node:hover rect {
+          stroke: #2563eb;
+          fill: #dbeafe;
+        }
+        .interactive-node.active rect {
+          fill: #e0f2fe;
+          stroke: #0ea5e9;
+        }
+      `;
+      svgRoot.appendChild(style);
+    };
+
+    const wireSvgInteractions = (svgDoc) => {
+      injectInteractionStyles(svgDoc);
+      const nodes = Object.keys(TOPIC_DATA)
+        .map((topicId) => svgDoc.getElementById(topicId))
+        .filter((node) => node);
+
+      let currentTopic = "vectA-Chemistry";
+
+      const handleActivate = (topicId) => {
+        currentTopic = topicId;
+        activateTopic(topicId, nodes);
+      };
+
+      nodes.forEach((node) => {
+        const topicId = node.id;
+        node.classList.add("interactive-node");
+        node.setAttribute("tabindex", "0");
+        node.setAttribute("focusable", "true");
+        node.setAttribute("role", "button");
+        node.setAttribute("aria-label", TOPIC_DATA[topicId].title);
+
+        node.addEventListener("focus", () => handleActivate(topicId));
+        node.addEventListener("click", () => handleActivate(topicId));
+        node.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            handleActivate(topicId);
+          }
+        });
+      });
+
+      activateTopic(currentTopic, nodes);
+    };
+
+    chemistryMap.addEventListener("load", () => {
+      const svgDoc = chemistryMap.contentDocument;
+      if (svgDoc) {
+        wireSvgInteractions(svgDoc);
+      }
+      fitParentFrame();
+    });
+
+    fitParentFrame();
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(fitParentFrame);
+      observer.observe(document.body);
+    } else {
+      window.addEventListener("resize", fitParentFrame);
+    }
+  </script>
+</body>
+</html>
