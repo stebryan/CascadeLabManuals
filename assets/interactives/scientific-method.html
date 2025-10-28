@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Explore the Scientific Method</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .interactive-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .figure-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .figure-header h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2vw, 2rem);
+    }
+
+    .figure-header p {
+      margin: 0;
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    object#scientific-method {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 0.75rem;
+      background: #ffffff;
+      box-shadow: 0 15px 30px rgb(15 23 42 / 12%);
+    }
+
+    .info-panel {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 20px 35px rgb(15 23 42 / 10%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .info-panel h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #1f2937;
+    }
+
+    .info-panel p {
+      margin: 0;
+      line-height: 1.7;
+      color: #374151;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 960px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .info-panel {
+        order: -1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="interactive-wrapper">
+    <header class="figure-header">
+      <h1 id="interactive-heading">Explore the Scientific Method</h1>
+      <p id="interactive-summary">Select a stage to see what happens at each point in the scientific method.</p>
+    </header>
+    <div class="content">
+      <object
+        id="scientific-method"
+        type="image/svg+xml"
+        data="../images/scientific-method.svg"
+        role="img"
+        aria-labelledby="interactive-heading info-title info-description">
+        <p>This interactive requires inline SVG support.</p>
+      </object>
+      <section class="info-panel" aria-live="polite" aria-atomic="true">
+        <h2 id="info-title">Observation & Curiosity</h2>
+        <p id="info-description">Notice something in the world, ask questions, and gather baseline information to investigate.</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const STEP_DATA = {
+      "vectB-Observation": {
+        title: "Observation & Curiosity",
+        description: "Notice a phenomenon, ask questions, and collect initial details that spark an investigation."
+      },
+      "vectB-Form": {
+        title: "Form a Hypothesis",
+        description: "Develop a testable explanation for what you observed and make a concrete prediction."
+      },
+      "vectB-Next": {
+        title: "Plan the Test",
+        description: "Move from ideas to action by deciding how to test the prediction in a controlled way."
+      },
+      "vectB-Perform": {
+        title: "Perform the Experiment",
+        description: "Conduct the experiment, collect data, and record new observations."
+      },
+      "vectB-ResultsNot": {
+        title: "Results Contradict Prediction",
+        description: "When the data do not match the prediction, revise or replace the hypothesis and try again."
+      },
+      "vectB-ResultsAre": {
+        title: "Results Support Prediction",
+        description: "Consistent results that match the prediction lend support to the original hypothesis."
+      },
+      "vectB-Contributes": {
+        title: "Add to the Knowledge Base",
+        description: "Document findings so they contribute to the broader scientific understanding of the topic."
+      },
+      "vectB-FurtherNot": {
+        title: "Further Tests Fail",
+        description: "If follow-up experiments cannot reproduce the results, revisit the hypothesis and improve the model."
+      },
+      "vectB-MuchConstant": {
+        title: "Observations Stay Consistent",
+        description: "Extensive testing that always produces the same outcome points toward a scientific law."
+      },
+      "vectB-Law": {
+        title: "Observation Becomes Law",
+        description: "A repeatedly confirmed observation can be stated as a scientific law that describes what happens."
+      },
+      "vectB-MuchSupport": {
+        title: "Hypothesis Gains Support",
+        description: "Repeated, independent tests that reach the same conclusion strengthen the hypothesis."
+      },
+      "vectB-Theory": {
+        title: "Hypothesis Becomes Theory",
+        description: "When a hypothesis consistently predicts and explains results, it matures into a scientific theory."
+      }
+    };
+
+    const infoTitle = document.getElementById("info-title");
+    const infoDescription = document.getElementById("info-description");
+    const scientificMethod = document.getElementById("scientific-method");
+
+    const fitParentFrame = () => {
+      const frame = window.frameElement;
+      if (!frame) {
+        return;
+      }
+      frame.style.width = "100%";
+      frame.style.maxWidth = "100%";
+
+      const doc = document.documentElement;
+      const body = document.body;
+      const height = Math.max(
+        body.scrollHeight,
+        doc.scrollHeight,
+        body.offsetHeight,
+        doc.offsetHeight
+      );
+      frame.style.height = `${height}px`;
+    };
+
+    const setPanelContent = (stepId) => {
+      const step = STEP_DATA[stepId];
+      if (!step) {
+        return;
+      }
+      infoTitle.textContent = step.title;
+      infoDescription.textContent = step.description;
+    };
+
+    const activateStep = (stepId, nodes) => {
+      nodes.forEach((node) => {
+        if (!node) {
+          return;
+        }
+        node.classList.toggle("active", node.id === stepId);
+      });
+      setPanelContent(stepId);
+    };
+
+    const injectInteractionStyles = (svgDoc) => {
+      const svgRoot = svgDoc.querySelector("svg");
+      if (!svgRoot) {
+        return;
+      }
+      const style = svgDoc.createElementNS("http://www.w3.org/2000/svg", "style");
+      style.textContent = `
+        .as-back {
+          fill: #ffffff;
+        }
+        .vectB-2,
+        .vectB-3,
+        .vectB-5 {
+          fill: #ffffff;
+          stroke: #1f2937;
+          stroke-width: 1.75;
+        }
+        .vectB-5 {
+          fill: #e2e8f0;
+        }
+        .vectB-4,
+        .vectB-1 {
+          fill: none;
+          stroke: #1f2937;
+          stroke-width: 1.75;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+        .vectB-6,
+        .vectB-10 {
+          fill: #1f2937;
+          stroke: none;
+        }
+        .vectB-7,
+        .vectB-8,
+        .vectB-9 {
+          font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+          fill: #0f172a;
+        }
+        .vectB-8 {
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .vectB-7,
+        .vectB-9 {
+          font-size: 13px;
+          font-weight: 500;
+        }
+        .interactive-node {
+          cursor: pointer;
+          transition: opacity 160ms ease;
+        }
+        .interactive-node rect,
+        .interactive-node path,
+        .interactive-node line,
+        .interactive-node polygon,
+        .interactive-node text {
+          transition: fill 180ms ease, stroke 180ms ease, opacity 180ms ease;
+        }
+        .interactive-node.active rect {
+          stroke: #0ea5e9;
+          fill: #dbeafe;
+        }
+        .interactive-node.active path,
+        .interactive-node.active line {
+          stroke: #0ea5e9;
+        }
+        .interactive-node.active polygon {
+          stroke: #0ea5e9;
+          fill: #bae6fd;
+        }
+        .interactive-node.active text {
+          fill: #0f172a;
+        }
+        .interactive-node:focus {
+          outline: none;
+        }
+      `;
+      svgRoot.appendChild(style);
+    };
+
+    const tuneGraphicLayout = (svgDoc) => {
+      const layoutWrapper = svgDoc.querySelector("#Images > g");
+      if (layoutWrapper) {
+        layoutWrapper.setAttribute(
+          "style",
+          "transform: translate(90px, 110px) scale(2.25); transform-origin: top left;"
+        );
+      }
+    };
+
+    const wireSvgInteractions = (svgDoc) => {
+      injectInteractionStyles(svgDoc);
+      tuneGraphicLayout(svgDoc);
+      const stepIds = Object.keys(STEP_DATA);
+      const nodes = stepIds
+        .map((stepId) => svgDoc.getElementById(stepId))
+        .filter((node) => node);
+
+      let currentStep = "vectB-Observation";
+
+      const handleActivate = (stepId) => {
+        currentStep = stepId;
+        activateStep(stepId, nodes);
+      };
+
+      nodes.forEach((node) => {
+        const stepId = node.id;
+        node.classList.add("interactive-node");
+        node.setAttribute("tabindex", "0");
+        node.setAttribute("focusable", "true");
+        node.setAttribute("role", "button");
+        const label = STEP_DATA[stepId]?.title || "Scientific method step";
+        node.setAttribute("aria-label", label);
+
+        node.addEventListener("focus", () => handleActivate(stepId));
+        node.addEventListener("click", () => handleActivate(stepId));
+        node.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            handleActivate(stepId);
+          }
+        });
+      });
+
+      activateStep(currentStep, nodes);
+    };
+
+    scientificMethod.addEventListener("load", () => {
+      const svgDoc = scientificMethod.contentDocument;
+      if (svgDoc) {
+        wireSvgInteractions(svgDoc);
+      }
+      fitParentFrame();
+    });
+
+    fitParentFrame();
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(fitParentFrame);
+      observer.observe(document.body);
+    } else {
+      window.addEventListener("resize", fitParentFrame);
+    }
+  </script>
+</body>
+</html>

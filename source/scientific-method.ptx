@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="scientific-method" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Scientific Method</title>
+
+    <p> The <term>scientific method</term> is a systematic approach to research that starts with making an observation and a little bit of curiosity. Usually this curiosity leads to a research question to try and answer. A <term>hypothesis</term>, is a tentative explanation or prediction based on our observations. The hypothesis is tested by conducting experiments. The results of these experiments can either validate, which is to support, or invalidate, which is to refute the initial prediction. If the results invalidate the hypothesis, then we can discard or modify it and try again. Many times experiments invalidate only parts of the hypothesis or theory, in which case the idea is modified. This is science at work! </p>
+    
+
+<interactive xml:id="interactive-scientific-method"
+             iframe="interactives/scientific-method.html"
+             width="100%"
+             height="640">
+  <title>Explore the Scientific Method</title>
+</interactive>
+
+    <p>If the results validate the hypothesis, they support the idea, but this does not mean the idea will always hold. All of the results, good or bad, contribute to our body of knowledge in a particular subject and eventually can lead to laws and theories. More on this in a bit. As knowledge, technology, and instrumentation develop over time, more experiments may be possible that lead us to re-evaluate current understandings. Let's apply the scientific method to a simple problem that might occur in our daily lives in the next section.
+    </p>
+
+</section>

@@ -28,5 +28,5 @@
 
   <!-- include sections -->
   <xi:include href="what-is-chemistry.ptx" />
-
+  <xi:include href="scientific-method.ptx" />
 </chapter>
