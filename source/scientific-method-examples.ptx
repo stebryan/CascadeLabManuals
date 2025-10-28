@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="scientific-method-examples" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Examples of the Scientific Method</title>
+
+    <subsection xml:id="practical-example">
+            <title>A Practical Example of the Scientific Method</title>
+            <p>This is a practical example of an observation/problem that needs solving.</p>
+
+            <dl>
+                <li>
+                    <title>Observe:</title>
+                    <p>My cell phone battery is not charging.</p>
+                </li>
+                <li>
+                    <title>Question:</title>
+                    <p>Is my cell phone not charging because there is no power to the outlet being used?</p>
+                </li>
+                <li>
+                    <title>Hypothesize:</title>
+                    <p>My phone will charge if I plug it into a different outlet.</p>
+                </li>
+                <li>
+                    <title>Experiment:</title>
+                    <p>To test the predictions, plug the phone into a different outlet and see if it charges.</p>
+                </li>
+                <li>
+                    <title>Result:</title>
+                    <p>I find the phone does not charge when I plug it into a different outlet. The question and hypothesis must be modified, followed by a new prediction and a new experiment.</p>
+                </li>
+                <li>
+                    <title>New Hypothesis:</title>
+                    <p>Plug the phone into the outlet using a different charging cable and see if it charges.</p>
+                </li>
+                <li>
+                    <title>New Result:</title>
+                    <p>My phone will charge. The result supports the prediction and gives evidence our hypothesis is correct.</p>
+                </li>
+            </dl>
+                
+            <p>This is just a simple practical example of using this method to solve problems - but let's look at a scientific example next.</p>
+        </subsection>
+    
+        <subsection xml:id="chemical-example">
+            <title>A Chemical Example of the Scientific Method</title>
+            <p>This example is one from history from Antoine Lavoisier, a French chemist.</p>
+
+            <dl>
+                <li>
+                    <title>Observe:</title>
+                    <p>He observed combustion, or burning, in a closed container and saw there was no change in the mass of the container after combustion.</p>
+                </li>
+                <li>
+                    <title>Question:</title>
+                    <p>Why is there no change in the mass of a container containing a combustion reaction despite the fact that it appears there is less substance present after burning?</p>
+                </li>
+                <li>
+                    <title>Hypothesize:</title>
+                    <p>He predicted that combustion involves the combination of a substance and air, or at least a component of air, and that this component accounted for the extra mass that he could not see with his eye.</p>
+                </li>
+                <li>
+                    <title>Experiment:</title>
+                    <p>To test the prediction, Lavoiser conducted combustion experiements under various conditions with and without oxygen present.</p>
+                </li>
+                <li>
+                    <title>Result:</title>
+                    <p>Over the course of many experiments he showed that oxygen was essential for combustion.</p>
+                </li>
+                <li>
+                    <title>Law:</title>
+                    <p>These results led to his development of the law of conservation of mass. This law states that in a chemical reaction, matter is not created or destroyed.</p>
+                </li>
+            </dl>
+                
+            <p>To further explain laws and observations, theories can be proposed. In this particular case, John Dalton's atomic theory helped to explain the law of conservation of mass and Lavoisier's, and others, observations. We will talk more about the law of conservation of mass and atomic theory later, but for now let's take a closer look at laws vs theories.</p>
+        </subsection>
+    
+
+
+</section>
