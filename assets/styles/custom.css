@@ -1,0 +1,53 @@
+:root {
+  --table-border-color: #1f2937;
+}
+
+figure#table-law-theory .tabular-box {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+figure#table-law-theory table.tabular {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #ffffff;
+}
+
+figure#table-law-theory table.tabular colgroup col:nth-child(1),
+figure#table-law-theory table.tabular th:first-child,
+figure#table-law-theory table.tabular td:first-child {
+  width: 34%;
+}
+
+figure#table-law-theory table.tabular colgroup col:nth-child(2),
+figure#table-law-theory table.tabular tr > *:nth-child(2) {
+  width: 33%;
+}
+
+figure#table-law-theory table.tabular colgroup col:nth-child(3),
+figure#table-law-theory table.tabular tr > *:nth-child(3) {
+  width: 33%;
+}
+
+figure#table-law-theory th,
+figure#table-law-theory td {
+  border: 2px solid var(--table-border-color);
+  padding: clamp(0.6rem, 1.2vw, 0.9rem) clamp(0.5rem, 1vw, 0.8rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  figure#table-law-theory table.tabular {
+    table-layout: auto;
+  }
+
+  figure#table-law-theory th,
+  figure#table-law-theory td {
+    font-size: clamp(0.9rem, 2.4vw, 1.05rem);
+    padding: 0.6rem 0.5rem;
+  }
+}

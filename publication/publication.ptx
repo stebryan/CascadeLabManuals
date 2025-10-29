@@ -118,6 +118,7 @@
 
     <!--The platform host can be "web" or "runestone"-->
       <!--<platform host="runestone"/>-->
+    <css file="../assets/styles/custom.css"/>
 
     <!-- Whether to knowl a particular elements is set here    -->
     <!-- Lots of elements have this possibility; see the guide -->

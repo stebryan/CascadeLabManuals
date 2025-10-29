@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="theory-vs-law" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Theory vs. Law</title>
+
+    <p> A <term>law</term> is a concise verbal or mathematical statement of a behavior or relation that always seems to be the same under the same conditions. A <term>theory</term> is a well-tested, unifying principle that explains a body of facts and the laws based on them. Essentially a law is the "what" and a theory is the "why". A few examples of laws include: Charles' Law, which is the relationship between temperature and pressure in gasses and the Law of Gravity. A few examples of theories include: Einstein's Theory of Relativity, Valence Bond Theory, and Kinetic Molecular Theory. Let's compare a few laws and theories to help better understand the difference between the two. </p>
+
+    <table xml:id="table-law-theory">
+  <title>Theory vs. Law</title>
+  <tabular row-headers="yes"
+           halign="center"
+           width="100%"
+           bottom="minor">
+    <col header="yes" width="34%"/>
+    <col width="33%"/>
+    <col width="33%"/>
+    <row>
+      <cell/>
+      <cell>
+        <line>A specific occurrence or </line>
+        <line>small number of occurrences</line>
+      </cell>
+      <cell>
+        <line>A generalization of </line>
+        <line>many occurrences</line>
+    </cell>
+    </row>
+    <row>
+      <cell header="yes">What Happened?</cell>
+      <cell>Observation</cell>
+      <cell>Law</cell>
+    </row>
+    <row>
+      <cell header="yes">Why this Happened?</cell>
+      <cell>Hypothesis</cell>
+      <cell>Theory</cell>
+    </row>
+  </tabular>
+</table>
+    
+    <subsection xml:id="gravitation-example">
+            <title>An Example - Gravitation</title>
+            <p> Let's think about something you've most likely heard of: gravity! Newton's law of universal gravitation states that any two objects or particles exert gravitational force on each other. This force is defined by the mathematical statement that relates the force experienced by each object to the masses of the objects,the distance between them, and the gravitational constant. Don't worry, you aren't responsible for knowing this equation. This law is an observation, or the <alert>"what"</alert> that is happening. </p>
+                <sbsgroup widths="40% 40%" >
+                    <sidebyside>
+                        <p>
+                            <line text_align="center"><alert>Newton's Law of Universal Gravitation</alert></line>
+                            <line></line>
+                            <line text_align="center">Any two objects exert a gravitational force on one another.</line>
+                            <me> F = G\frac{m_1 m_2}{r^2}</me>
+                        </p>
+                        <image source="images/gravitychart.jpg" width="100%" />
+                        
+                    </sidebyside>
+                </sbsgroup>
+                <figure xml:id="gravitation-law">
+                    <caption>A diagram illustrating the gravitational attraction between two masses.</caption>
+                </figure>
+                <p> On the other hand, Einstein's general theory of relativity takes things a step further and answers the <alert>"why"</alert> something is happening. This theory clarifies the law of gravitation and provides an explanation for Newton's observations. Specifically, that gravity is a property of space and time, and the curvature of space-time affects the motion of objects. This is a brief, simplified explanation; a more in-depth look at these concepts can be found in a physics course.</p>
+                <sbsgroup widths="40% 40%" >
+                    <sidebyside>
+                        <p>
+                            <line text_align="center"><alert>General Theory of Relativity</alert></line>
+                            <line></line>
+                            <line text_align="center">Describes gravity using the curvature of space-time.</line>
+                        </p>
+                        <image source="images/curvedspacetime.jpg" width="100%" />
+                        
+                    </sidebyside>
+                </sbsgroup>
+                <figure xml:id="gravitation-theory">
+                    <caption>A diagram illustrating the distortion of space-time around a mass.</caption>
+                </figure>
+    
+    </subsection>
+
+ <subsection xml:id="chemistry-example">
+            <title>An Example from Chemistry</title>
+            <p> Now let's look at a chemistry example.The law of conservation of mass states that the total mass of substances before and after a chemical reaction remains the same. This is the <alert>"what"</alert> that Lavoisier observed in his combustion experiments. This law, the law of definite proportions, and the law of multiple proportions all led to the development of atomic theory, which states that all matter is made of small particles called atoms. This theory helped explain the <alert>"why"</alert> behind Lavoisier's and others' observations.</p>
+                <sbsgroup widths="40% 40%" >
+                    <sidebyside>
+                        <p>
+                            <line text_align="center"><alert>Law of Conservation of Mass</alert></line>
+                            <line></line>
+                            <line text_align="center">All matter is made of small particles called attoms.</line>
+                        </p>
+                        <p>
+                            <line text_align="center"><alert>Atomic Theory</alert></line>
+                            <line></line>
+                            <line text_align="center">The total mass of substances before and after a chemical reaction remains the same.</line>
+                        </p>
+                        
+                    </sidebyside>
+                </sbsgroup>
+                <figure xml:id="conservation-of-mass">
+                    <image source="images/reactants-products.png" width="100%" />
+                    <caption>A diagram illustrating the conservation of mass in a reaction.</caption>
+                </figure>
+                
+    </subsection>
+    
+
+</section>

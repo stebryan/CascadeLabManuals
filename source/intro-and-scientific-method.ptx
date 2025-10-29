@@ -30,4 +30,5 @@
   <xi:include href="what-is-chemistry.ptx" />
   <xi:include href="scientific-method.ptx" />
   <xi:include href="scientific-method-examples.ptx" />
+  <xi:include href="theory-vs-law.ptx" />
 </chapter>
