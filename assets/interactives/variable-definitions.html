@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Variable Definitions</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .interactive-wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding-block: 1.2rem;
+      padding-inline: clamp(1rem, 3.5vw, 2.4rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    .figure-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .figure-header h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 2.2vw, 2.15rem);
+      letter-spacing: 0.01em;
+    }
+
+    .figure-header p {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #4b5563;
+    }
+
+    object#variable-definitions {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      aspect-ratio: 920 / 560;
+      border: none;
+      border-radius: 0.9rem;
+      background: #ffffff;
+      box-shadow: 0 18px 40px rgb(15 23 42 / 14%);
+    }
+
+    @media (max-width: 640px) {
+      .interactive-wrapper {
+        padding-inline: clamp(0.75rem, 6vw, 1.5rem);
+      }
+
+      .figure-header p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="interactive-wrapper">
+    <header class="figure-header">
+      <h1 id="interactive-heading">How Experimental Variables Work Together</h1>
+      <p id="interactive-summary">Click each circle to spotlight the independent, dependent, or controlled variables and reveal their definitions. Use the reset control to view the full diagram again.</p>
+    </header>
+    <object
+      id="variable-definitions"
+      type="image/svg+xml"
+      data="../images/variabledefinitions.svg"
+      role="img"
+      aria-labelledby="interactive-heading interactive-summary">
+      <p>Your browser needs inline SVG support to view this interactive.</p>
+    </object>
+  </div>
+
+  <script>
+    const frame = window.frameElement;
+    const fitParentFrame = () => {
+      if (!frame) {
+        return;
+      }
+
+      frame.style.width = "100%";
+      frame.style.maxWidth = "100%";
+
+      const doc = document.documentElement;
+      const body = document.body;
+      const height = Math.max(
+        body.scrollHeight,
+        doc.scrollHeight,
+        body.offsetHeight,
+        doc.offsetHeight
+      );
+
+      frame.style.height = `${height}px`;
+    };
+
+    const diagram = document.getElementById("variable-definitions");
+    const STATE_CONFIG = [
+      {
+        key: "ind",
+        buttonId: "btnInd",
+        circleId: "cInd",
+        definitionId: "defInd",
+        label: "Independent variable"
+      },
+      {
+        key: "dep",
+        buttonId: "btnDep",
+        circleId: "cDep",
+        definitionId: "defDep",
+        label: "Dependent variable"
+      },
+      {
+        key: "ctrl",
+        buttonId: "btnCtrl",
+        circleId: "cCtrl",
+        definitionId: "defCtrl",
+        label: "Controlled variables"
+      }
+    ];
+
+    const bootstrapInteractive = () => {
+      const svgDoc = diagram.contentDocument;
+      if (!svgDoc) {
+        fitParentFrame();
+        return;
+      }
+
+      const svgRoot = svgDoc.documentElement;
+      if (svgRoot && !svgRoot.hasAttribute("preserveAspectRatio")) {
+        svgRoot.setAttribute("preserveAspectRatio", "xMidYMid meet");
+      }
+
+      const nodes = STATE_CONFIG.map((config) => ({
+        ...config,
+        button: svgDoc.getElementById(config.buttonId),
+        circle: svgDoc.getElementById(config.circleId),
+        definition: svgDoc.getElementById(config.definitionId)
+      }));
+
+      let activeKey = null;
+
+      const updateState = (key) => {
+        activeKey = key;
+        nodes.forEach(({ key: nodeKey, button, circle, definition }) => {
+          if (!button || !circle || !definition) {
+            return;
+          }
+          const isActive = nodeKey === key;
+          circle.classList.toggle("is-active", isActive);
+          if (key === null) {
+            circle.classList.remove("is-dim");
+          } else {
+            circle.classList.toggle("is-dim", !isActive);
+          }
+          definition.setAttribute(
+            "opacity",
+            isActive ? "1" : key === null ? "0.08" : "0.18"
+          );
+          button.classList.toggle("is-selected", isActive);
+          button.classList.toggle("is-dim", key !== null && !isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+      };
+
+      const makeActivator = (key) => () => {
+        const nextKey = activeKey === key ? null : key;
+        updateState(nextKey);
+        fitParentFrame();
+      };
+
+      nodes.forEach(({ key, button, label }) => {
+        if (!button) {
+          return;
+        }
+
+        button.setAttribute("tabindex", "0");
+        button.setAttribute("role", "button");
+        button.setAttribute("focusable", "true");
+        if (label) {
+          button.setAttribute("aria-label", label);
+        }
+
+        const activate = makeActivator(key);
+
+        button.addEventListener("click", activate);
+        button.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            activate();
+          }
+        });
+      });
+
+      updateState(null);
+      fitParentFrame();
+    };
+
+    diagram.addEventListener("load", bootstrapInteractive);
+    if (diagram.contentDocument) {
+      bootstrapInteractive();
+    }
+
+    fitParentFrame();
+
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(fitParentFrame);
+      observer.observe(document.body);
+    } else {
+      window.addEventListener("resize", fitParentFrame);
+    }
+  </script>
+</body>
+</html>

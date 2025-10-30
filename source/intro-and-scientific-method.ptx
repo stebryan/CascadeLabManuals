@@ -31,4 +31,7 @@
   <xi:include href="scientific-method.ptx" />
   <xi:include href="scientific-method-examples.ptx" />
   <xi:include href="theory-vs-law.ptx" />
+  <xi:include href="knowledge-check1.ptx" />
+  <xi:include href="experiments.ptx" />
+  <xi:include href="variables.ptx" />
 </chapter>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 920 560"
+    role="img" aria-labelledby="title desc">
+    <title id="title">Interactive Venn: Experimental Variables</title>
+    <desc id="desc">Three overlapping circles—Independent, Dependent, Controlled. Click a circle or
+        its label to highlight it and reveal its definition.</desc>
+
+    <style><![CDATA[
+      .title { font:700 22px sans-serif; fill:#111; }
+      .subtitle { font:16px sans-serif; fill:#333; }
+      .defHead { font:700 18px sans-serif; fill:#111; }
+      .defText { font:16px sans-serif; fill:#111; }
+      .panel { fill:#f7f7f8; stroke:#d9d9d9; stroke-width:1.5; rx:12; ry:12; }
+      /* Venn circles */
+      .venn { stroke-width:3; cursor:pointer; transition: all 160ms ease; }
+      .venn.is-active { stroke-width:5; fill-opacity:0.55; }
+      .venn.is-dim { opacity:0.25; }
+      .ind { fill:#7fb3ff; stroke:#2a7fff; fill-opacity:0.35; }
+      .dep { fill:#9be7a4; stroke:#2f9b56; fill-opacity:0.35; }
+      .ctrl { fill:#ffd48a; stroke:#c48a1e; fill-opacity:0.35; }
+      /* Circle titles */
+      .circleName { font:700 24px sans-serif; fill:#111; pointer-events:none; }
+      /* Interaction helpers */
+      .hitArea { fill:transparent; stroke:none; pointer-events:all; cursor:pointer; }
+      .hotspot { cursor:pointer; }
+      .hotspot .circleName { opacity:0.85; transition: opacity 160ms ease; }
+      .hotspot.is-dim .circleName { opacity:0.35; }
+      .hotspot:focus { outline:none; }
+      /* Definition cards */
+      .defBox { fill:#ffffff; stroke:#d0d0d0; stroke-width:1.5; rx:10; ry:10; }
+      .defGroup { transition: opacity 160ms ease; }
+    ]]></style>
+
+    <!-- Title -->
+    <text class="title" x="28" y="36">How the three variable types connect</text>
+    <text class="subtitle" x="28" y="60">Click a circle or its label to highlight a variable and
+        show its definition.</text>
+
+    <!-- ===== Venn Diagram ===== -->
+    <g id="venn" transform="translate(20,100)">
+        <!-- Independent (left) -->
+        <g id="btnInd" class="hotspot" transform="translate(200,240)">
+            <circle class="hitArea" r="140" />
+            <circle id="cInd" class="venn ind" r="120" />
+            <text class="circleName" text-anchor="middle" dominant-baseline="middle">
+                <tspan x="0" y="-12">Independent</tspan>
+                <tspan x="0" y="20">Variable</tspan>
+            </text>
+        </g>
+
+        <!-- Dependent (top-right) -->
+        <g id="btnDep" class="hotspot" transform="translate(360,120)">
+            <circle class="hitArea" r="140" />
+            <circle id="cDep" class="venn dep" r="120" />
+            <text class="circleName" text-anchor="middle" dominant-baseline="middle">
+                <tspan x="0" y="-12">Dependent</tspan>
+                <tspan x="0" y="20">Variable</tspan>
+            </text>
+        </g>
+
+        <!-- Controlled (bottom-right) -->
+        <g id="btnCtrl" class="hotspot" transform="translate(360,320)">
+            <circle class="hitArea" r="140" />
+            <circle id="cCtrl" class="venn ctrl" r="120" />
+            <text class="circleName" text-anchor="middle" dominant-baseline="middle">
+                <tspan x="0" y="-12">Controlled</tspan>
+                <tspan x="0" y="20">Variable(s)</tspan>
+            </text>
+        </g>
+    </g>
+
+    <!-- ===== Definition Panel (right side) ===== -->
+    <g transform="translate(600,96)">
+        <rect class="panel" x="-10" y="-20" width="300" height="340" />
+        <!-- Independent -->
+        <g id="defInd" class="defGroup" opacity="0.08">
+            <rect class="defBox" x="0" y="0" width="280" height="96" />
+            <text class="defHead" x="14" y="26">Independent Variable</text>
+            <text class="defText" x="14" y="52">The factor that is deliberately</text>
+            <text class="defText" x="14" y="72">changed by the experimenter.</text>
+        </g>
+        <!-- Dependent -->
+        <g id="defDep" class="defGroup" opacity="0.08" transform="translate(0,112)">
+            <rect class="defBox" x="0" y="0" width="280" height="96" />
+            <text class="defHead" x="14" y="26">Dependent Variable</text>
+            <text class="defText" x="14" y="52">The outcome that is measured</text>
+            <text class="defText" x="14" y="72">in response to the change.</text>
+        </g>
+        <!-- Controlled -->
+        <g id="defCtrl" class="defGroup" opacity="0.08" transform="translate(0,224)">
+            <rect class="defBox" x="0" y="0" width="280" height="96" />
+            <text class="defHead" x="14" y="26">Controlled Variable(s)</text>
+            <text class="defText" x="14" y="52">The factors kept constant</text>
+            <text class="defText" x="14" y="72">to ensure a fair test.</text>
+        </g>
+
+    </g>
+</svg>

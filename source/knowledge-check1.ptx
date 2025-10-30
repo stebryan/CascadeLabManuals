@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="knowledge-check1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Check Your Knowledge</title>
+
+  <p>Work through the interactive problems below to check your understanding of the concepts in the previous sections.</p>
+  <exercises>
+    <exercise number="Exercise 1.1">
+      <interactive xml:id="knowledge-check1-webwork"
+                   iframe="https://webwork.pcc.edu/webwork2/html2xml?problemSeed=1&amp;answersSubmitted=0&amp;sourceFilePath=chem-library/setCH151_LearningChecks/module1-1.pg&amp;displayMode=MathJax&amp;courseID=chem-library&amp;userID=daemon&amp;course_password=daemon&amp;outputformat=simple&amp;password=daemon&amp;showSolutions=1&amp;showHints=1&amp;problemUUID=chem151"
+                   width="100%"
+                   height="100%">
+      </interactive>
+    </exercise>
+    <exercise number="Exercise 1.2">
+      <interactive xml:id="knowledge-check2-webwork"
+                   iframe="https://webwork.pcc.edu/webwork2/html2xml?problemSeed=1&amp;answersSubmitted=0&amp;sourceFilePath=chem-library/setCH151_LearningChecks/module1-2.pg&amp;displayMode=MathJax&amp;courseID=chem-library&amp;userID=daemon&amp;course_password=daemon&amp;outputformat=simple&amp;password=daemon&amp;showSolutions=1&amp;showHints=1&amp;problemUUID=chem151"
+                   width="100%"
+                   height="100%">
+      </interactive>
+    </exercise>
+  </exercises>
+
+</section>

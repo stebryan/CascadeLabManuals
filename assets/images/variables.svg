@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1080 320"
+    role="img" aria-labelledby="title desc">
+    <title id="title">Experiment Variables Box</title>
+    <desc id="desc">Gray box divided into three softly bordered columns showing independent,
+        dependent, and controlled variables.</desc>
+
+    <style>
+        .panel { fill:#9ea2a6; }
+        .heading { fill:#000000; font:700 26px sans-serif; }
+        .body { fill:#ffffff; font:20px sans-serif; }
+        .divider { stroke:#cccccc; stroke-width:2; } /* lighter gray lines */
+    </style>
+
+    <!-- Background -->
+    <rect class="panel" x="0" y="0" width="1080" height="320" rx="20" ry="20" />
+
+    <!-- Vertical dividers -->
+    <line class="divider" x1="360" y1="20" x2="360" y2="300" />
+    <line class="divider" x1="720" y1="20" x2="720" y2="300" />
+
+    <!-- Column 1 -->
+    <g transform="translate(40,70)">
+        <text class="heading" y="0">Independent Variable</text>
+        <text class="body" y="45">Temperature of the water</text>
+    </g>
+
+    <!-- Column 2 -->
+    <g transform="translate(400,70)">
+        <text class="heading" y="0">Dependent Variable</text>
+        <text class="body" y="45">Time it takes for the sugar cube</text>
+        <text class="body" y="70">to dissolve</text>
+    </g>
+
+    <!-- Column 3 -->
+    <g transform="translate(760,70)">
+        <text class="heading" y="0">Controlled Variable(s)</text>
+        <text class="body" y="45">1. Size/shape of sugar cube</text>
+        <text class="body" y="70">2. Amount of water</text>
+        <text class="body" y="95">3. Size of container</text>
+        <text class="body" y="120">4. Level of agitation (stirring)</text>
+    </g>
+</svg>

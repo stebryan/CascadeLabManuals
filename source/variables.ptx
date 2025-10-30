@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="experiemental-variables" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Variables</title>
+    <interactive xml:id="interactive-variable-definitions"
+             iframe="interactives/variable-definitions.html"
+             width="100%"
+             height="640">
+    <title>Explore Experimental Variables</title>
+    </interactive>
+    
+
+    <p>The influencing factor in an experiment is called the <term>independent variable</term>. This is the variable, element or factor, that is altered on purpose by the researcher. In an experiment we only want one independent variable so conclusions about the results can be made. If too many variables are changing simultaneously, it is difficult to pinpoint what caused the results. For example, remember the cell phone battery dilemma earlier in this chapter. If I had changed both the charging cable and the outlet at the same time, how would I know for certain which caused the battery to finally charge? The <term>dependent variable</term> is the variable that changes in response to the independent variable. This is what is recorded as the results, or data, of the experiment. The <term>controlled variable or variables</term> are the variable or variables that remained unchanged during the course of an experiment. There is usually more than one controlled variable. This is different from a control group. Let's take a look at an example. </p>
+
+    <exploration>
+        <title>Examples of variables in an Experiment</title>
+
+            <p>First, we need a question to answer!</p>
+                
+            <p>Will a cube of sugar dissolve faster in hot water?</p>
+
+            <figure xml:id="sugarcubes">
+                <image source="images/sugarcubes.jpg" width="30%" >
+                <description>Sugar cubes stacked on one another.</description></image>
+                <caption>Sugar cubes for the experiment.</caption>
+            </figure>
+            
+            <p>Let's plan an experiment. We will need to record the time it takes a sugar cube to dissolve in different temperatures of water. So what variable are we, the researchers, changing? Maybe you thought of water temperature? Yes, we are changing the temperature of water so this is our independent variable. </p>
+
+            <p>How about our dependent variable? Did you say the dissolving time? We are interested in how fast the sugar dissolves which will be affected by the temperature, time to dissolve is our dependent variable. </p>
+            
+            <p>Our control variables are everything else that is remaining unchanged during the experiment. Experiments will usually have more than one controlled variable, so be sure to be thoughtful and thorough when planning your experiments. What might be some controlled variables for this example? For this example, the size and shape of the sugar cube, amount of water used, and agitation are just a few possible controlled variables.</p>
+
+            <figure xml:id="variables">
+                <image source="images/variables.svg" width="100%" />
+                <caption>Variables for our planned experiment.</caption>
+            </figure>
+    </exploration>
+
+</section>

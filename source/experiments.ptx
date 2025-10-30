@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="experiments" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Experiments</title>
+
+    <figure xml:id="experiment-connections">
+        <image source="images/connectedpeopleblocks.jpg" width="60%" />
+        <description>A set of blocks with icons of people connected by strings.</description>
+    </figure>
+
+    <p> Have you noticed that we have mentioned the word experiment quite a bit so far? We need experiments to test our hypotheses, so what is an experiment exactly? <term>Experiments</term> are very controlled procedures that are designed to collect data and observations that will support or nullify our hypothesis. Commonly, an experimenter will have a control group and an experimental group for testing. The <term>control group</term> is the experiment or trial that is fixed and used for comparison, while the <term>experimental group</term> will differ from the control groups by a specific influencing factor. It is also common to repeat experiments multiple times in order to ensure reproducible results. </p>
+    
+    <dl>
+                <li>
+                    <title>Experiment:</title>
+                    <p>Recreation of an event or occurrence to test a hypothesis.</p>
+                </li>
+                <li>
+                    <title>Control Group:</title>
+                    <p>Fixed set for comparison.</p>
+                </li>
+                <li>
+                    <title>Experimental Group:</title>
+                    <p>Differs from control group by one influencing factor.</p>
+                </li>
+               
+            </dl>
+
+
+</section>
