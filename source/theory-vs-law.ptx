@@ -38,9 +38,9 @@
   </tabular>
 </table>
     
-    <subsection xml:id="gravitation-example">
+    <exploration xml:id="gravitation-example">
             <title>An Example - Gravitation</title>
-            <introduction> Let's think about something you've most likely heard of: gravity! Newton's law of universal gravitation states that any two objects or particles exert gravitational force on each other. This force is defined by the mathematical statement that relates the force experienced by each object to the masses of the objects,the distance between them, and the gravitational constant. Don't worry, you aren't responsible for knowing this equation. This law is an observation, or the <alert>"what"</alert> that is happening. </introduction>
+            <p> Let's think about something you've most likely heard of: gravity! Newton's law of universal gravitation states that any two objects or particles exert gravitational force on each other. This force is defined by the mathematical statement that relates the force experienced by each object to the masses of the objects,the distance between them, and the gravitational constant. Don't worry, you aren't responsible for knowing this equation. This law is an observation, or the <alert>"what"</alert> that is happening. </p>
                 <sbsgroup widths="40% 40%" >
                     <sidebyside>
                         <p>
@@ -56,7 +56,7 @@
                 <figure xml:id="gravitation-law">
                     <caption>A diagram illustrating the gravitational attraction between two masses.</caption>
                 </figure>
-                <introduction> On the other hand, Einstein's general theory of relativity takes things a step further and answers the <alert>"why"</alert> something is happening. This theory clarifies the law of gravitation and provides an explanation for Newton's observations. Specifically, that gravity is a property of space and time, and the curvature of space-time affects the motion of objects. This is a brief, simplified explanation; a more in-depth look at these concepts can be found in a physics course.</introduction>
+                <p> On the other hand, Einstein's general theory of relativity takes things a step further and answers the <alert>"why"</alert> something is happening. This theory clarifies the law of gravitation and provides an explanation for Newton's observations. Specifically, that gravity is a property of space and time, and the curvature of space-time affects the motion of objects. This is a brief, simplified explanation; a more in-depth look at these concepts can be found in a physics course.</p>
                 <sbsgroup widths="40% 40%" >
                     <sidebyside>
                         <p>
@@ -72,11 +72,11 @@
                     <caption>A diagram illustrating the distortion of space-time around a mass.</caption>
                 </figure>
     
-    </subsection>
+            </exploration>
 
- <subsection xml:id="chemistry-example">
+ <exploration xml:id="chemistry-example">
             <title>An Example from Chemistry</title>
-            <introduction> Now let's look at a chemistry example.The law of conservation of mass states that the total mass of substances before and after a chemical reaction remains the same. This is the <alert>"what"</alert> that Lavoisier observed in his combustion experiments. This law, the law of definite proportions, and the law of multiple proportions all led to the development of atomic theory, which states that all matter is made of small particles called atoms. This theory helped explain the <alert>"why"</alert> behind Lavoisier's and others' observations.</introduction>
+            <p> Now let's look at a chemistry example.The law of conservation of mass states that the total mass of substances before and after a chemical reaction remains the same. This is the <alert>"what"</alert> that Lavoisier observed in his combustion experiments. This law, the law of definite proportions, and the law of multiple proportions all led to the development of atomic theory, which states that all matter is made of small particles called atoms. This theory helped explain the <alert>"why"</alert> behind Lavoisier's and others' observations.</p>
                 <sbsgroup widths="40% 40%" >
                     <sidebyside>
                         <p>
@@ -97,7 +97,7 @@
                     <caption>A diagram illustrating the conservation of mass in a reaction.</caption>
                 </figure>
                 
-    </subsection>
+            </exploration>
     
 
 </section>

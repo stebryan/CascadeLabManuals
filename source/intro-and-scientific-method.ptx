@@ -8,8 +8,9 @@
  </p>
     <!-- Left: Image -->
     <figure xml:id="intro-chemistry">
-        <image source="images/beaker.jpg" width="60%" />
-        <description>An assortment of colorful liquid filled test tubes in a beaker.</description>
+        <image source="images/beaker.jpg" width="60%" >
+        <description>An assortment of colorful liquid filled test tubes in a beaker.</description></image>
+        <caption>An assortment of colorful liquid filled test tubes in a beaker.</caption>
     </figure>
 
     <!-- Right: Text Content -->
@@ -34,4 +35,5 @@
   <xi:include href="knowledge-check1.ptx" />
   <xi:include href="experiments.ptx" />
   <xi:include href="variables.ptx" />
+  <xi:include href="types-of-data.ptx" />
 </chapter>

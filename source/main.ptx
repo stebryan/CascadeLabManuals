@@ -6,7 +6,7 @@
 
   <book xml:id="my-great-book">
     <title>Fundamentals of Chemistry</title>
-    <subtitle>An introductory course to prepare for General Chemistry.</subtitle>
+    <subtitle>An Introductory Course to Prepare for General Chemistry.</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />

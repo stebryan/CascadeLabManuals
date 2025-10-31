@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="types-of-data" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Types of Data From Experiments</title>
+
+    
+    <p>When conducting an experiment, we need to make sure that we record everything we observe occurring, not just the final results. Some observations can be made with our 5 senses, but really we should never taste anything in the laboratory! Other observations are made using instrumentation. <term>Qualitative observations</term> are simple descriptions about the characteristics or behavior of nature, while <term>quantitative observations</term> compare a characteristic to a standard numerical scale. </p>
+
+    <sidebyside widths="40% 40%" margins="auto" valign="bottom">
+        <figure xml:id="five-senses">
+            <image source="images/smelltastetouch.jpg" width="100%">
+            <description>a neon sign that spells out smell, taste, touch.
+            </description></image>
+            <caption>Data observed by our senses is qualitative.</caption>
+        </figure>
+        <figure xml:id="caliper">
+            <image source="images/caliper.jpg" width="100%">
+            <description>a pair of anilog calipers.
+            </description></image>
+            <caption>Data measured by instrumentation is quantitative.</caption>
+        </figure>
+                        
+    </sidebyside>
+
+    <p> Qualitative is observable data such as colors, textures, smells, tastes, and appearance. There are no numbers involved when recording qualitative observations. For example, stating that something is hot or cold without specifying a temperature is qualitative. Quantitative is measured data or observations. This type of data consists of numbers with units that have been measured using tools or instrumentation. For example, length, height, area, volume, mass, time, and temperature can all be measured using various tools and a specific value and unit can be recorded. 
+    </p>
+
+</section>

@@ -4,8 +4,9 @@
   <title>Experiments</title>
 
     <figure xml:id="experiment-connections">
-        <image source="images/connectedpeopleblocks.jpg" width="60%" />
-        <description>A set of blocks with icons of people connected by strings.</description>
+        <image source="images/connectedpeopleblocks.jpg" width="60%" >
+        <description>A set of blocks with icons of people connected by strings.</description></image>
+        <caption>An experiment involves detailed, systematic and connected steps.</caption>
     </figure>
 
     <p> Have you noticed that we have mentioned the word experiment quite a bit so far? We need experiments to test our hypotheses, so what is an experiment exactly? <term>Experiments</term> are very controlled procedures that are designed to collect data and observations that will support or nullify our hypothesis. Commonly, an experimenter will have a control group and an experimental group for testing. The <term>control group</term> is the experiment or trial that is fixed and used for comparison, while the <term>experimental group</term> will differ from the control groups by a specific influencing factor. It is also common to repeat experiments multiple times in order to ensure reproducible results. </p>
