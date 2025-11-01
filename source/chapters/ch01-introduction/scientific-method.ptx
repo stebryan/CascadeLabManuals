@@ -7,7 +7,7 @@
     
 
 <interactive xml:id="interactive-scientific-method"
-             iframe="interactives/scientific-method.html"
+             iframe="chapters/ch01-introduction/interactives/scientific-method.html"
              width="100%"
              height="640">
   <title>Explore the Scientific Method</title>

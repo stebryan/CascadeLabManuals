@@ -3,7 +3,7 @@
 <section xml:id="experiemental-variables" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Variables</title>
     <interactive xml:id="interactive-variable-definitions"
-             iframe="interactives/variable-definitions.html"
+             iframe="chapters/ch01-introduction/interactives/variable-definitions.html"
              width="100%"
              height="640">
     <title>Explore Experimental Variables</title>
@@ -20,7 +20,7 @@
             <p>Will a cube of sugar dissolve faster in hot water?</p>
 
             <figure xml:id="sugarcubes">
-                <image source="images/sugarcubes.jpg" width="30%" >
+                <image source="chapters/ch01-introduction/images/sugarcubes.jpg" width="30%" >
                 <description>Sugar cubes stacked on one another.</description></image>
                 <caption>Sugar cubes for the experiment.</caption>
             </figure>
@@ -32,7 +32,7 @@
             <p>Our control variables are everything else that is remaining unchanged during the experiment. Experiments will usually have more than one controlled variable, so be sure to be thoughtful and thorough when planning your experiments. What might be some controlled variables for this example? For this example, the size and shape of the sugar cube, amount of water used, and agitation are just a few possible controlled variables.</p>
 
             <figure xml:id="variables">
-                <image source="images/variables.svg" width="100%" />
+                <image source="chapters/ch01-introduction/images/variables.svg" width="100%" />
                 <caption>Variables for our planned experiment.</caption>
             </figure>
     </exploration>

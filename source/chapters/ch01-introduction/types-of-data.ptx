@@ -8,13 +8,13 @@
 
     <sidebyside widths="40% 40%" margins="auto" valign="bottom">
         <figure xml:id="five-senses">
-            <image source="images/smelltastetouch.jpg" width="100%">
+            <image source="chapters/ch01-introduction/images/smelltastetouch.jpg" width="100%">
             <description>a neon sign that spells out smell, taste, touch.
             </description></image>
             <caption>Data observed by our senses is qualitative.</caption>
         </figure>
         <figure xml:id="caliper">
-            <image source="images/caliper.jpg" width="100%">
+            <image source="chapters/ch01-introduction/images/caliper.jpg" width="100%">
             <description>a pair of anilog calipers.
             </description></image>
             <caption>Data measured by instrumentation is quantitative.</caption>

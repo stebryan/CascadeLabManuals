@@ -12,7 +12,8 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./intro-and-scientific-method.ptx" />
+    <xi:include href="./chapters/ch01-introduction/chapter.ptx" />
+    <xi:include href="./chapters/ch02-measurement/chapter.ptx" />
 
 
     <!-- Include backmatter -->

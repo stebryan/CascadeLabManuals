@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-measurement" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Measurement</title>
+
+  <introduction>
+    <p>Draft introduction for the measurement chapter. Replace this paragraph with your overview once content is ready.</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="measurement-basics.ptx" />
+</chapter>

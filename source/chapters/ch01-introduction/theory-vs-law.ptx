@@ -41,7 +41,7 @@
     <exploration xml:id="gravitation-example">
             <title>An Example - Gravitation</title>
             <p> Let's think about something you've most likely heard of: gravity! Newton's law of universal gravitation states that any two objects or particles exert gravitational force on each other. This force is defined by the mathematical statement that relates the force experienced by each object to the masses of the objects,the distance between them, and the gravitational constant. Don't worry, you aren't responsible for knowing this equation. This law is an observation, or the <alert>"what"</alert> that is happening. </p>
-                <sbsgroup widths="40% 40%" >
+                <sbsgroup widths="40% 40%" valign="middle">
                     <sidebyside>
                         <p>
                             <line text_align="center"><alert>Newton's Law of Universal Gravitation</alert></line>
@@ -49,7 +49,7 @@
                             <line text_align="center">Any two objects exert a gravitational force on one another.</line>
                             <me> F = G\frac{m_1 m_2}{r^2}</me>
                         </p>
-                        <image source="images/gravitychart.jpg" width="100%" />
+                        <image source="chapters/ch01-introduction/images/gravitychart.jpg" width="100%" />
                         
                     </sidebyside>
                 </sbsgroup>
@@ -57,14 +57,14 @@
                     <caption>A diagram illustrating the gravitational attraction between two masses.</caption>
                 </figure>
                 <p> On the other hand, Einstein's general theory of relativity takes things a step further and answers the <alert>"why"</alert> something is happening. This theory clarifies the law of gravitation and provides an explanation for Newton's observations. Specifically, that gravity is a property of space and time, and the curvature of space-time affects the motion of objects. This is a brief, simplified explanation; a more in-depth look at these concepts can be found in a physics course.</p>
-                <sbsgroup widths="40% 40%" >
+                <sbsgroup widths="40% 40%" valign="middle">
                     <sidebyside>
                         <p>
                             <line text_align="center"><alert>General Theory of Relativity</alert></line>
                             <line></line>
                             <line text_align="center">Describes gravity using the curvature of space-time.</line>
                         </p>
-                        <image source="images/curvedspacetime.jpg" width="100%" />
+                        <image source="chapters/ch01-introduction/images/curvedspacetime.jpg" width="100%" />
                         
                     </sidebyside>
                 </sbsgroup>
@@ -93,7 +93,7 @@
                     </sidebyside>
                 </sbsgroup>
                 <figure xml:id="conservation-of-mass">
-                    <image source="images/reactants-products.png" width="100%" />
+                    <image source="chapters/ch01-introduction/images/reactants-products.png" width="100%" />
                     <caption>A diagram illustrating the conservation of mass in a reaction.</caption>
                 </figure>
                 

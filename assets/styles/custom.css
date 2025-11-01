@@ -51,12 +51,3 @@ figure#table-law-theory td {
     padding: 0.6rem 0.5rem;
   }
 }
-
-/* Adjust iframe heights for WeBWorK exercises so each problem can size itself independently */
-#knowledge-check1-webwork {
-  height: 900px;
-}
-
-#knowledge-check2-webwork {
-  height: 500px;
-}

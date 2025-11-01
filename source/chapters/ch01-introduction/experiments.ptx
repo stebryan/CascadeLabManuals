@@ -4,7 +4,7 @@
   <title>Experiments</title>
 
     <figure xml:id="experiment-connections">
-        <image source="images/connectedpeopleblocks.jpg" width="60%" >
+        <image source="chapters/ch01-introduction/images/connectedpeopleblocks.jpg" width="60%" >
         <description>A set of blocks with icons of people connected by strings.</description></image>
         <caption>An experiment involves detailed, systematic and connected steps.</caption>
     </figure>
