@@ -79,7 +79,6 @@
       ]
     }
   },
-  // Allow the container to use the host's outbound network; useful when the default sandbox blocks external services like WeBWorK.
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  // "remoteUser": "root"
+  //"remoteUser": "root"
 }
